@@ -139,7 +139,7 @@ $(document).ready(function(){
         $("#submit").hide();
         $("#time-remain").hide()
     
-        setTimeout(function(){
+        setTimeout(function() {
             displayQuestion(onQuestion);}, 5000);
 
         if (onQuestion === 8) {
@@ -175,13 +175,12 @@ $(document).ready(function(){
             }
     
             //adds proper attributes to the buttons and labels
-            $("#voltaic_holder").css({"position":"relative", "top":"-75px"});
-    
+            // checkButton.attr('class', 'input-group input-group-prepend input-group-text');
             checkButton.attr('id', questionArray[n].choices[a]);
             checkButton.attr('name', 'questionArray[n]');
             checkButton.css({"margin-left":"25px"});
             choiceLabel.attr('for', questionArray[n].choices[a]);
-            choiceLabel.text(questionArray[n].choices[a]);
+            choiceLabel.text(" " + questionArray[n].choices[a]);
             choiceLabel.css({"margin-right":"25px"});
     
             // appends each choice to the answer choices div

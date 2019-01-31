@@ -4,3 +4,11 @@ body {
     background-size: 100%;
     background-position: center;
 }
+
+.check-buttons {
+    margin: 10px;
+}
+
+.choice-labels {
+    margin-right: 30px;
+}

@@ -47,7 +47,7 @@ $(document).ready(function(){
         choices: ["A Skull", "Scissors", "A Shark", "Curly from the 3 Stooges"],
         correctAnswer: "Scissors",
         gif: "https://media.giphy.com/media/8a0Gjt3TmUFGM/giphy.gif",
-        stinger: "Unattributed"
+        stinger: "Cut it out!"
     };
     
     var q5 = {
@@ -55,7 +55,7 @@ $(document).ready(function(){
         choices: ["A Car", "Flowers", "A River", "A Coin"],
         correctAnswer: "a River",
         gif: "https://media.giphy.com/media/3HoB7BmMnKMdq/giphy.gif",
-        stinger: "Unattributed"
+        stinger: "Bored yet?"
     };
     
     var q6 = {
@@ -63,7 +63,7 @@ $(document).ready(function(){
         choices: ["A Teenager", "An Echo", "The Invisible Man", "The Wizard of Oz"],
         correctAnswer: "an Echo",
         gif: "https://media.giphy.com/media/GLjbMKJdoob60/giphy.gif",
-        stinger: "Unattributed"
+        stinger: "Come again?"
     };
 
     var q7 = {
@@ -175,13 +175,13 @@ $(document).ready(function(){
             }
     
             //adds proper attributes to the buttons and labels
-            // checkButton.attr('class', 'input-group input-group-prepend input-group-text');
+            checkButton.attr('class', 'check-buttons');
             checkButton.attr('id', questionArray[n].choices[a]);
             checkButton.attr('name', 'questionArray[n]');
-            checkButton.css({"margin-left":"25px"});
+            
+            choiceLabel.attr('class', 'choice-labels h5');
             choiceLabel.attr('for', questionArray[n].choices[a]);
             choiceLabel.text(" " + questionArray[n].choices[a]);
-            choiceLabel.css({"margin-right":"25px"});
     
             // appends each choice to the answer choices div
             $("#answer-choices").append(checkButton, choiceLabel);
@@ -236,7 +236,7 @@ $(document).ready(function(){
         $("#title").text("Incorrect");
         $("#title").attr("class", "alert alert-danger");
         $("#question").html("<img src='" + questionArray[n].gif + "' height='200px'>");
-        $("#answer-choices").text("The answer is: "+ questionArray[n].correctAnswer);
+        $("#answer-choices").attr("class", "h5").text("The answer is: "+ questionArray[n].correctAnswer);
         $("#submit").hide();
         $("#time-remain").hide()
     

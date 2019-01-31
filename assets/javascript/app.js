@@ -153,6 +153,7 @@ $(document).ready(function(){
         // display question on screen
         time = 15;
         $("#title").text("Question: " + (onQuestion + 1) + "/8");
+        $("#title").attr("class", "alert alert-light");
         $("#question").text(questionArray[n].riddle);
         $("#answer-choices").text('');
         $("#submit").show();
@@ -212,7 +213,8 @@ $(document).ready(function(){
     // Correct Answer
     function correctAnsDisplay(n){
     
-        $("#title").text("You are Correct");
+        $("#title").text("Correct");
+        $("#title").attr("class", "alert alert-success");
         $("#question").html("<img src='"+questionArray[n].gif+"' height='200px'>");
         $("#answer-choices").text(questionArray[n].stinger);
     
@@ -233,6 +235,7 @@ $(document).ready(function(){
     function incorrectAnsDisplay(n) {
 
         $("#title").text("Incorrect");
+        $("#title").attr("class", "alert alert-danger");
         $("#question").html("<img src='" + questionArray[n].gif + "' height='200px'>");
         $("#answer-choices").text("The answer is: "+ questionArray[n].correctAnswer);
         $("#submit").hide();
@@ -252,9 +255,10 @@ $(document).ready(function(){
     function displayEndScreen() {
         // if (onQuestion === 8) {
             $("#title").text("Game over!!");
-            $("#question").html("<p>Correct: "+correctTotal+
-                                "</p><p>Incorrect: "+wrongTotal+
-                                "</p><p>Unanswered: "+unansweredTotal);
+            $("#title").attr("class", "alert alert-secondary");
+            $("#question").html("<p>Correct: "+ correctTotal +
+                                "</p><p>Incorrect: " + wrongTotal +
+                                "</p><p>Unanswered: " + unansweredTotal);
             $("#answer-choices").text("");
             $("#try-again").show();
             $("#submit").hide();

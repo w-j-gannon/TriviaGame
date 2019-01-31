@@ -56,7 +56,26 @@
                         <h1 class="jumbotron-heading">Riddle Me This</h1>
                         <hr>
                         <p class="lead text-muted">Answer the questions before time runs out!</p>
-                        <button type="button" class="btn btn-warning">Start</button>          
+                        <div id="wrapper">
+                            <div id="time-remain" class="alert alert-warning col-12 align-self-center"></div>
+
+                            <div id="title"></div>
+                            <br>
+                        
+                            <div id="question" class="h1"></div>
+                            <br>
+                            <br>
+
+                            <div id="answer-choices"></div>
+                    
+                            <button id="try-again" class="btn btn-secondary"></button>
+                    
+                            <br><br>
+                            <button class="btn btn-primary" id="submit">Submit</button>
+                            
+                        </div>
+                        <br>
+                        <button type="button" id="start-button" class="btn btn-warning">Start</button>          
                     </div>
                 </section>
             </div>
